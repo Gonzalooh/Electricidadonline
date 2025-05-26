@@ -62,23 +62,6 @@
     <button onclick="calcLongitud()">Calcular</button>
     <div id="longitud-output"></div>
   </div>
-  <!-- Nueva pestaña en la calculadora -->
-<button class="tab-button" onclick="switchTab('corriente')">Cálculo de Corriente</button>
-
-<!-- Contenido de la nueva pestaña -->
-<div id="corriente" class="tab-content">
-  <h2>Cálculo de Corriente (Monofásico)</h2>
-  <p><strong>Fórmulas:</strong></p>
-  <ul>
-    <li>\[ I = \frac{P}{V} \quad \text{(fórmula simplificada)} \]</li>
-    <li>\[ I = \frac{P}{V \cdot \cos(\varphi)} \quad \text{(fórmula completa)} \]</li>
-  </ul>
-  <label>Potencia \(P\) (kW): <input type="number" id="potenciaKw" /></label><br>
-  <label>Tensión \(V\) (V): <input type="number" id="voltaje" /></label><br>
-  <label>Cos(\(\varphi\)) (opcional): <input type="number" step="0.01" id="cosphiCorriente" /></label><br>
-  <button onclick="calcCorriente()">Calcular</button>
-  <div id="corriente-output"></div>
-</div>
 
   <script>
     function switchTab(tab) {
