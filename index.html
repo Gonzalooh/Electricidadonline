@@ -96,7 +96,7 @@
       const vp = parseFloat(document.getElementById('vp').value);
       if (isNaN(p) || isNaN(l) || isNaN(i) || isNaN(cosphi) || isNaN(vp) || vp === 0) return alert("Por favor ingresa todos los datos correctamente");
       const sc = (2 * p * l * i * cosphi) / vp;
-      const formula = `SC = \\frac{2 \\cdot ${p.toFixed(4)} \\cdot ${l.toFixed(4)} \\cdot ${i.toFixed(4)} \\cdot ${cosphi.toFixed(4)}}{${vp.toFixed(4)}} = ${sc.toFixed(4)}\\ \\text{mm}^2`;
+      const formula = `SC = \\frac{2 \\cdot ${p.toFixed(3)} \\cdot ${l.toFixed(0)} \\cdot ${i.toFixed(0)} \\cdot ${cosphi.toFixed(0)}}{${vp.toFixed(1)}} = ${sc.toFixed(3)}\\ \\text{mm}^2`;
       document.getElementById('resistividad-output').innerHTML = `<p>\\[ ${formula} \\]</p>`;
       MathJax.typeset();
     }
@@ -109,7 +109,7 @@
       const vp = parseFloat(document.getElementById('vp3').value);
       if (isNaN(p) || isNaN(l) || isNaN(i) || isNaN(cosphi) || isNaN(vp) || vp === 0) return alert("Por favor ingresa todos los datos correctamente");
       const sc = (Math.sqrt(3) * p * l * i * cosphi) / vp;
-      const formula = `SC = \\frac{\\sqrt{3} \\cdot ${p.toFixed(4)} \\cdot ${l.toFixed(4)} \\cdot ${i.toFixed(4)} \\cdot ${cosphi.toFixed(4)}}{${vp.toFixed(4)}} = ${sc.toFixed(4)}\\ \\text{mm}^2`;
+      const formula = `SC = \\frac{\\sqrt{3} \\cdot ${p.toFixed(3)} \\cdot ${l.toFixed(0)} \\cdot ${i.toFixed(1)} \\cdot ${cosphi.toFixed(2)}}{${vp.toFixed(1)}} = ${sc.toFixed(3)}\\ \\text{mm}^2`;
       document.getElementById('trifasico-output').innerHTML = `<p>\\[ ${formula} \\]</p>`;
       MathJax.typeset();
     }
@@ -121,7 +121,7 @@
       const sc = parseFloat(document.getElementById('s2').value);
       if (isNaN(p) || isNaN(l) || isNaN(i) || isNaN(sc) || sc === 0) return alert("Por favor ingresa todos los datos correctamente");
       const vp = (2 * p * l * i) / sc;
-      const formula = `VP = \\frac{2 \\cdot ${p.toFixed(4)} \\cdot ${l.toFixed(4)} \\cdot ${i.toFixed(4)}}{${sc.toFixed(4)}} = ${vp.toFixed(4)}\\ V`;
+      const formula = `VP = \\frac{2 \\cdot ${p.toFixed(3)} \\cdot ${l.toFixed(3)} \\cdot ${i.toFixed(3)}}{${sc.toFixed(3)}} = ${vp.toFixed(3)}\\ V`;
       document.getElementById('caida-output').innerHTML = `<p>\\[ ${formula} \\]</p>`;
       MathJax.typeset();
     }
@@ -135,10 +135,24 @@
         return alert("Datos distintos de 0");
       }
       const l = (sc * vp) / (2 * p * i);
-      const formula = `L = \\frac{${sc.toFixed(4)} \\cdot ${vp.toFixed(4)}}{2 \\cdot ${p.toFixed(4)} \\cdot ${i.toFixed(4)}} = ${l.toFixed(4)}\\ \\text{m}`;
+      const formula = `L = \\frac{${sc.toFixed(3)} \\cdot ${vp.toFixed(3)}}{2 \\cdot ${p.toFixed(3)} \\cdot ${i.toFixed(3)}} = ${l.toFixed(3)}\\ \\text{m}`;
       document.getElementById('longitud-output').innerHTML = `<p>\\[ ${formula} \\]</p>`;
       MathJax.typeset();
     }
   </script>
 </body>
+  <!-- Caja de información general -->
+  <div id="info-box" style="margin-top: 40px; padding: 15px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;">
+    <h3>Informacion extra</h3>
+    <p>
+      <p>Sc = Seccion del conductor.</p>
+      <p>P = Coeficiente de resistividad del conductor.</p>
+      <p>L = Largo del conductor en m.</p>
+      <p>I = Intensidad de corriente que circula por el conductor en A.</p>
+      <p>Cos(x) = Caida maxima de tension en el conductor en V.</p>
+
+      
+      <p>Resistencia =  Cobre 0.018 ohm mm2/m    -    Aluminio 0.028 ohm-mm2/m    -    a 20°c.</p>
+    </p>
+  </div>
 </html>
