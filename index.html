@@ -104,7 +104,7 @@
       const sc = parseFloat(document.getElementById('s2').value);
       if (isNaN(p) || isNaN(l) || isNaN(i) || isNaN(sc) || sc === 0) return alert("Por favor ingresa todos los datos correctamente");
       const vp = (2 * p * l * i) / sc;
-      const formula = `VP = \\frac{2 \\cdot ${p.toFixed(3)} \\cdot ${l.toFixed(0)} \\cdot ${i.toFixed(0)}}{${sc.toFixed(0)}} = ${vp.toFixed(0)}\\ V`;
+      const formula = `VP = \\frac{2 \\cdot ${p.toFixed(3)} \\cdot ${l.toFixed(0)} \\cdot ${i.toFixed(0)}}{${sc.toFixed(0)}} = ${vp.toFixed(1)}\\ V`;
       document.getElementById('caida-output').innerHTML = `<p>\\[ ${formula} \\]</p>`;
       MathJax.typeset();
     }
@@ -136,7 +136,7 @@
 
       
       <p>Resistencia =  Cobre 0.018 ohm mm2/m    -    Aluminio 0.028 ohm-mm2/m    -    a 20°c.</p>
-      <p>Version 0.1</p>
+      <p>Version 0.2</p>
     </p>
   </div>
 </html>
