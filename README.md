@@ -1,8 +1,8 @@
-# Electricithing
+# Electricidadonline
 
 **Electricithing** es una página web que contiene una calculadora de apoyo para estudiantes de electricidad y electrónica. Su propósito principal es facilitar la comprobación de cálculos realizados a mano en trabajos prácticos, ayudando a identificar posibles errores de forma rápida y sencilla.
 
-⚡ Sitio web: [https://gonzalooh.github.io/Electricithing/](https://gonzalooh.github.io/Electricithing/)
+⚡ Sitio web: [https://gonzalooh.github.io/Electricidadonline/](https://gonzalooh.github.io/Electricidadonline/)
 
 ## ⚠️ Advertencia y exención de responsabilidad
 
@@ -27,4 +27,4 @@ Este proyecto se encuentra en desarrollo y puede tener errores importantes. Se r
 
 ## 📚 Licencia
 
-Este proyecto se distribuye sin garantía de ningún tipo. Puedes revisar el archivo LICENSE (si corresponde) para más detalles.
+Este proyecto se distribuye sin garantía de ningún tipo.
