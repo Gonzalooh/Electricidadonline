@@ -79,7 +79,7 @@
       const vp = parseFloat(document.getElementById('vp').value);
       if (isNaN(p) || isNaN(l) || isNaN(i) || isNaN(cosphi) || isNaN(vp) || vp === 0) return alert("Por favor ingresa todos los datos correctamente");
       const sc = (2 * p * l * i * cosphi) / vp;
-      const formula = `SC = \\frac{2 \\cdot ${p.toFixed(3)} \\cdot ${l.toFixed(0)} \\cdot ${i.toFixed(0)} \\cdot ${cosphi.toFixed(0)}}{${vp.toFixed(1)}} = ${sc.toFixed(3)}\\ \\text{mm}^2`;
+      const formula = `SC = \\frac{2 \\cdot ${p.toFixed(2)} \\cdot ${l.toFixed(0)} \\cdot ${i.toFixed(0)} \\cdot ${cosphi.toFixed(0)}}{${vp.toFixed(1)}} = ${sc.toFixed(3)}\\ \\text{mm}^2`;
       document.getElementById('resistividad-output').innerHTML = `<p>\\[ ${formula} \\]</p>`;
       MathJax.typeset();
     }
